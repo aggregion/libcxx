@@ -4,7 +4,7 @@
 #include <type_traits>
 
 /**
- * EOS-specific header.
+ * AGR-specific header.
  *
  * Implimentation for compiler builtin functions. Theoretically Clang should
  * generate inline code for calls to these functions. And the generated code should
