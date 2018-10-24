@@ -44,6 +44,10 @@
 #pragma clang diagnostic ignored "-Wsign-conversion"
 #endif
 
+extern "C" void agrio_assert(bool, const char*);
+size_t strftime(char*, size_t, const char*, const struct tm*) { agrio_assert(false, "strftime called"); }
+size_t strftime_l(char*, size_t, const char*, const struct tm*, locale_t) { agrio_assert(false, "strftime_l called"); }
+
 _LIBCPP_BEGIN_NAMESPACE_STD
 
 struct __libcpp_unique_locale {
